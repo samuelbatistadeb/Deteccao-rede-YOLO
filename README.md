@@ -33,33 +33,27 @@ Primeiramente, clone o repositório YOLOv5 e instale as dependências:
 ### 2. Baixar e Preparar o Dataset COCO
 Se você não tiver o dataset COCO, faça o download ou utilize a versão já existente no repositório. Se necessário, ajuste o arquivo de configuração do YOLO para usar apenas as classes desejadas do COCO.
 
-# Exemplo de código para carregar o dataset COCO
-bash 
-```!pip install pycocotools ```
 ### 3. Configurar o Treinamento
 Configure o arquivo coco.yaml (ou crie um próprio) com as duas classes que deseja treinar. Um exemplo básico de configuração de arquivo coco.yaml seria:
 
-yaml
-Copiar
-Editar
+```yaml
 train: ./path/to/train/images
 val: ./path/to/val/images
 
 nc: 2  # Número de classes
 names: ['class1', 'class2']  # Nome das classes
-4. Treinando o Modelo com YOLOv5
+```
+### 4. Treinando o Modelo com YOLOv5
 Execute o comando para iniciar o treinamento com YOLOv5:
 
-bash
-Copiar
-Editar
+````bash
 !python yolov5/train.py --img 640 --batch 16 --epochs 10 --data coco.yaml --weights yolov5s.pt --cache
-5. Visualizando as Métricas
-Durante o treinamento, é possível monitorar as métricas (como loss e mAP@0.5) com TensorBoard ou capturando os logs do treinamento. Caso queira gerar gráficos diretamente em Python a partir dos logs, utilize o código abaixo:
+````
+### 5. Visualizando as Métricas
+Durante o treinamento, é possível monitorar as métricas (como `loss` e ``mAP@0.5``) com TensorBoard ou capturando os logs do treinamento. Caso queira gerar gráficos diretamente em Python a partir dos logs, utilize o código abaixo:
 
-python
-Copiar
-Editar
+````python
+
 # Exemplo para visualizar os gráficos de perda e precisão
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -84,12 +78,11 @@ axes[1].legend()
 
 plt.tight_layout()
 plt.show()
-6. Resultados
-Após o treinamento, o modelo será salvo na pasta runs/train/exp/ (ou uma pasta com nome semelhante). Você pode usar este modelo treinado para realizar a detecção de objetos em novas imagens ou vídeos.
+````
+### 6. Resultados
+Após o treinamento, o modelo será salvo na pasta ``runs/train/exp/`` (ou uma pasta com nome semelhante). Você pode usar este modelo treinado para realizar a detecção de objetos em novas imagens ou vídeos.
 
-python
-Copiar
-Editar
+````python
 # Exemplo de código para usar o modelo treinado para inferência
 from yolov5 import YOLOv5
 
@@ -101,5 +94,6 @@ results = model.predict('path/to/test/image.jpg')
 
 # Mostrar os resultados
 results.show()  # Exibe a imagem com as caixas delimitadoras
-Contribuições
+````
+# Contribuições
 Sinta-se à vontade para contribuir com melhorias neste repositório. Se encontrar problemas ou tiver sugestões de melhorias, crie uma issue ou faça um pull request.
