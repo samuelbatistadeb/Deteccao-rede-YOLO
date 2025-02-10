@@ -1,3 +1,5 @@
+# Projeto Desenvolvido no ambiente COLAB
+
 # !git clone https://github.com/ultralytics/yolov5
 # %cd yolov5
 # !pip install -U -r requirements.txt
