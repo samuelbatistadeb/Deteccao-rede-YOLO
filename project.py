@@ -1,8 +1,8 @@
 # Projeto Desenvolvido no ambiente COLAB
 
-# !git clone https://github.com/ultralytics/yolov5
-# %cd yolov5
-# !pip install -U -r requirements.txt
+# !git clone https://github.com/ultralytics/yolov5 #Retirar comentário e espaço no inicio da linha
+# %cd yolov5                                        #Retirar comentário e espaço no inicio da linha
+# !pip install -U -r requirements.txt                #Retirar comentário e espaço no inicio da linha
 
 import torch
 from pathlib import Path
@@ -10,6 +10,8 @@ from IPython.display import Image, display
 import shutil
 import matplotlib.pyplot as plt
 from google.colab import files
+import json
+import matplotlib.pyplot as plt
 
 # Carregar o modelo YOLOv5 pré-treinado
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # 'yolov5s' é o modelo mais leve
@@ -38,10 +40,10 @@ with open('data.yaml', 'w') as f:
     f.write(data_yaml)
 
 # Iniciar o treinamento com YOLOv5
-# !python train.py --img 640 --batch 16 --epochs 3 --data data.yaml --weights yolov5s.pt --cache
+# !python train.py --img 640 --batch 16 --epochs 3 --data data.yaml --weights yolov5s.pt --cache  #Retirar comentário e espaço no inicio da linha
 
 #  Testar o modelo treinado com imagens de teste
-# !python val.py --data data.yaml --weights runs/train/exp/weights/best.pt --img 640
+# !python val.py --data data.yaml --weights runs/train/exp/weights/best.pt --img 640               #Retirar comentário e espaço no inicio da linha
 
 # Criar um botão de upload de arquivos
 uploaded = files.upload()
