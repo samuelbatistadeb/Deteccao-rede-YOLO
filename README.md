@@ -1,10 +1,10 @@
 # Transfer Learning com YOLOv5 para Detecção de Objetos
 
-Este projeto utiliza a técnica de **Transfer Learning** com a rede **YOLOv5** para a **detecção de objetos** em imagens, treinando o modelo para detectar duas classes do **Dataset COCO**.
+Este projeto utiliza a técnica de **Transfer Learning** com a rede **YOLOv5** para a **detecção de objetos** em imagens, treinando o modelo para detectar duas classes do **Dataset COCO** sendo elas "person" e "car".
 
 ## Objetivo
 
-O objetivo deste projeto é treinar um modelo de detecção de objetos utilizando o **YOLOv5**, uma das arquiteturas mais populares para detecção em tempo real, com um dataset específico de duas classes extraídas do **COCO Dataset**. Através do Transfer Learning, o modelo é inicialmente treinado em um conjunto de dados genérico e depois ajustado para detectar classes específicas, melhorando sua performance e acelerando o treinamento.
+O objetivo deste projeto é treinar um modelo de detecção de objetos utilizando o **YOLOv5**, uma das arquiteturas mais populares para detecção em tempo real, com um dataset específico de duas classes extraídas do **COCO Dataset**. Através do Transfer Learning, o modelo é inicialmente treinado em um conjunto de dados genérico e depois ajustado para detectar as classes desejadas, melhorando sua performance e acelerando o treinamento.
 
 ## Requisitos
 
@@ -41,7 +41,7 @@ train: ./path/to/train/images
 val: ./path/to/val/images
 
 nc: 2  # Número de classes
-names: ['class1', 'class2']  # Nome das classes
+names: ['person', 'car']  # Nome das classes
 ```
 ### 4. Treinando o Modelo com YOLOv5
 Execute o comando para iniciar o treinamento com YOLOv5:
