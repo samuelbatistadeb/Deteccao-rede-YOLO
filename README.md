@@ -97,3 +97,7 @@ results.show()  # Exibe a imagem com as caixas delimitadoras
 ````
 # Contribuições
 Sinta-se à vontade para contribuir com melhorias neste repositório. Se encontrar problemas ou tiver sugestões de melhorias, crie uma issue ou faça um pull request.
+
+---
+**Desenvolvido por**: Samuel Batista  
+**Data**: Fevereiro de 2025
